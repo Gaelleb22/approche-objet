@@ -8,9 +8,10 @@ public class TestPersonne {
 	public static void main(String[] args) {
 		Personne a = new Personne("Dupuis", "Sylvain");
 		
-		Personne b = new Personne("Dupuis", "Sylvianne", new AdressePostale(5, "rue de la forge", 22000, "Dinan"));
+		AdressePostale adresse = new AdressePostale(5, "rue de la forge", 22000, "Dinan");
 		
-		
+		a.ModifierAdresse(adresse);
+		System.out.println(a.adresse.ville);
 	}
 
 }
