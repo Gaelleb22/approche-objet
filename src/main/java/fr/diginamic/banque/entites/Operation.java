@@ -5,6 +5,10 @@ public abstract class Operation {
 	private String dateOp;
 	private double montant;
 
+	/**
+	 * @param dateOp : date de l'opération
+	 * @param montant : montant de l'opération
+	 */
 	public Operation(String dateOp, double montant) {
 		this.dateOp = dateOp;
 		this.montant = montant;
@@ -14,16 +18,16 @@ public abstract class Operation {
 		return dateOp;
 	}
 
-	private void setDateOp(String dateOp) {
-		this.dateOp = dateOp;
+	private void setDateOp(String nvDateOp) {
+		this.dateOp = nvDateOp;
 	}
 
 	public double getMontant() {
 		return montant;
 	}
 
-	private void setMontant(double montant) {
-		this.montant = montant;
+	private void setMontant(double nvMontant) {
+		this.montant = nvMontant;
 	}
 
 	@Override

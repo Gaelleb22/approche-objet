@@ -17,8 +17,8 @@ public class Compte {
 		solde = nvSolde;
 	}
 
-	public Compte(String compte, double solde) {
-		this.numeroCompte = compte;
+	public Compte(String numeroCompte, double solde) {
+		this.numeroCompte = numeroCompte;
 		this.solde = solde;
 	}
 

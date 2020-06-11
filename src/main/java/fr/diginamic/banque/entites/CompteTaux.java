@@ -4,8 +4,8 @@ public class CompteTaux extends Compte {
 	
 	private double taux;
 
-	public CompteTaux(String compte, double solde, double taux) {
-		super(compte, solde);
+	public CompteTaux(String numeroCompte, double solde, double taux) {
+		super(numeroCompte, solde);
 		this.taux = taux;
 	}
 
@@ -13,8 +13,8 @@ public class CompteTaux extends Compte {
 		return taux;
 	}
 
-	private void setTaux(double taux) {
-		this.taux = taux;
+	private void setTaux(double nvTaux) {
+		this.taux = nvTaux;
 	}
 
 	public String toString() {
