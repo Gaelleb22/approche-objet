@@ -23,7 +23,7 @@ public class Compte {
 	}
 
 	public String toString() {
-		return "Numéro de compte : " + numeroCompte + ", solde : " + solde + "€.";
+		return "Numéro de compte : " + numeroCompte + " solde : " + solde + "€";
 	}
 	
 }
