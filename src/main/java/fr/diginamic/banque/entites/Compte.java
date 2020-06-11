@@ -21,5 +21,9 @@ public class Compte {
 		this.numeroCompte = compte;
 		this.solde = solde;
 	}
+
+	public String toString() {
+		return "Numéro de compte : " + numeroCompte + ", solde : " + solde + "€.";
+	}
 	
 }
