@@ -22,5 +22,9 @@ public class Salarie extends Intervenant {
 	public double getSalaire() {
 		return salaireMensuel;
 	}
+	
+	public String toString() {
+		return "Salarie";
+	}
 
 }

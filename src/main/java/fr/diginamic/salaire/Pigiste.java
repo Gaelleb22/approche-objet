@@ -31,5 +31,9 @@ public class Pigiste extends Intervenant {
 	public double getSalaire() {
 		return nombreJourTravail*salaireJournalier;
 	}
+	
+	public String toString() {
+		return "Pigiste";
+	}
 
 }

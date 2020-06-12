@@ -10,5 +10,12 @@ public abstract class Intervenant {
 	}
 
 	public abstract double getSalaire();
+	
+	public void afficherDonnees() {
+		System.out.println("Nom : "+nom);
+		System.out.println("Prénom : "+prenom);
+		System.out.println("Salaire : "+getSalaire());
+		System.out.println("Statut : "+toString());
+	}
 
 }
