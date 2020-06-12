@@ -10,20 +10,12 @@ public class TestOperation {
 		operation[2] = new Debit("21/12/2019", 299.90);
 		operation[3] = new Credit("05/01/2020", 1350.0);
 		
+		double solde = 0.0;
 		for (int i=0; i<operation.length; i++) {
-			System.out.println(operation[i]+ " " + operation[i].afficherType());
+			System.out.println(operation[i]);
+			solde = operation[i].imputersolde(solde);
 		}
-		
-		double resultat = 0.0;
-		for (int i=0; i<operation.length; i++) {
-			if(operation[i].afficherType()=="Crédit") {
-				resultat += operation[i].getMontant();
-			}
-			else {
-				resultat -= operation[i].getMontant();
-			}
-		}
-		System.out.println("Le total des opérations est de : " + resultat);
+		System.out.println("Le total des opérations est de : " + solde);
 
 	}
 

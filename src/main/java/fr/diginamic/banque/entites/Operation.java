@@ -32,9 +32,10 @@ public abstract class Operation {
 
 	@Override
 	public String toString() {
-		return dateOp + " --> " + montant;
+		return afficherType() + " " + dateOp + " --> " + montant;
 	}
 	
 	public abstract String afficherType();
+	public abstract double imputersolde(double solde);
 
 }

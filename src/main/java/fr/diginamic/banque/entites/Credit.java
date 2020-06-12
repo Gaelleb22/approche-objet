@@ -8,4 +8,8 @@ public class Credit extends Operation {
 	public String afficherType() {
 		return "Crédit";
 	}
+	
+	public double imputersolde(double solde) {
+		return solde+getMontant();
+	}
 }

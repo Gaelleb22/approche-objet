@@ -9,5 +9,9 @@ public class Debit extends Operation {
 	public String afficherType() {
 		return "Débit";
 	}
+	
+	public double imputersolde(double solde) {
+		return solde-getMontant();
+	}
 
 }
