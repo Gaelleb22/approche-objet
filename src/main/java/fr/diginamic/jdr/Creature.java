@@ -20,13 +20,13 @@ public class Creature extends Combattant {
 
 	private String creatureAleatoire() {
 		nom = null;
-		int nombreAleatoire = random.nextInt(2);
+		int nombreAleatoire = random.nextInt(3);
 		switch(nombreAleatoire) {
 		case(0) : nom = "loup";
 		break;
 		case(1) : nom = "gobelin";
 		break;
-		case(3) : nom = "troll";
+		case(2) : nom = "troll";
 		break;
 		}
 		return nom;

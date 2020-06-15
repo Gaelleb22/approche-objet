@@ -26,7 +26,6 @@ public class Jeu {
 		
 		boolean finCombat = false;
 		int i =1;
-		int nvScore =0;
 		while(!finCombat) {
 			System.out.println("\n  -->    TOUR : "+ i++);
 			int attaquePersonnage = personnage.attaque();
@@ -34,9 +33,10 @@ public class Jeu {
 			System.out.println("Votre attaque est de : "+attaquePersonnage+"\nL'attaque de votre adversaire est de : "+attaqueCreature);
 			
 			int degat = attaquePersonnage-attaqueCreature;
+			
+			//déterminer le vainqueur du tour
 			if(degat==0) {
 				System.out.println("Pas vaiqueur pour ce tour");
-				pressAnyKeyToContinue();
 				continue;
 			}
 			else if(degat<0) {
@@ -44,7 +44,7 @@ public class Jeu {
 				if(personnage.getPointDeVie() < 0) {
 					personnage.setPointDeVie(0);
 				}
-				System.out.println("\nVotre adversaire remporte le tour et vous inflige "+degat+" points de dégat");
+				System.out.println("\nVotre adversaire remporte le tour et vous inflige "+(-degat)+" points de dégat");
 				System.out.println("Il vous reste " + personnage.getPointDeVie()+" points de vie");
 			}
 			else {
@@ -56,28 +56,33 @@ public class Jeu {
 				System.out.println("Il lui reste "+creature.getPointDeVie()+" point de vie");
 			}
 			
+
+			//déterminer le vainqueur du combat
 			if (personnage.getPointDeVie()<=0) {
-				System.out.println("\nVous avez perdu ! \nVotre score est de : "+personnage.getScore());
-				pressAnyKeyToContinue();
+			System.out.println("\nVous avez perdu ! \nVotre score est de : "+personnage.getScore());
+				appuyerSurEntrerPourContinue();;
 				finCombat = true;
 			}
 			else if(creature.getPointDeVie()<=0) {
-				personnage.calculerScore(creature.getNom());
+			personnage.calculerScore(creature.getNom());
 				System.out.println("\nVous avez gagner cette manche ! \nVotre score est de : "+personnage.getScore()+"\n");
-				pressAnyKeyToContinue();
+				appuyerSurEntrerPourContinue();;
 				finCombat = true;
 			}
 			else {
 				System.out.println("");
-				pressAnyKeyToContinue();
+				appuyerSurEntrerPourContinue();
 				continue;
 			}
+
 		}
+		
 	}
 	
-	private static void pressAnyKeyToContinue()
+	
+	private static void appuyerSurEntrerPourContinue()
 	 { 
-	        System.out.println("Press Enter key to continue...");
+	        System.out.println("Appuyer sur ENTRER pour continuer...");
 	        try
 	        {
 	            System.in.read();

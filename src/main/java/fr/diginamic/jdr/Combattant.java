@@ -18,7 +18,7 @@ public abstract class Combattant {
 		return force;
 	}
 
-	protected void setForce(int nvForce) {
+	public void setForce(int nvForce) {
 		this.force = nvForce;
 	}
 
