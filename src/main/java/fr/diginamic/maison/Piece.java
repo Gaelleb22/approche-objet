@@ -25,5 +25,6 @@ public abstract class Piece {
 	private void setEtage(int nvEtage) {
 		this.etage = nvEtage;
 	}
+	public abstract String toString();
 
 }

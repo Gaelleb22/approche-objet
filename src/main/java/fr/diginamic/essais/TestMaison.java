@@ -25,6 +25,12 @@ public class TestMaison {
 		System.out.println(maison.superficieTotale());
 		System.out.println(maison.superficieEtage(0));
 		System.out.println(maison.superficieEtage(1));
+		
+		System.out.println("Chambre = "+maison.superficiePiece("Chame") + "m², nombre de chambre = "+maison.nombreDePiece("cham"));
+		System.out.println("Cuisine = " + maison.superficiePiece("cuisine") + "m², nombre de cuisine = "+maison.nombreDePiece("cuIsIne"));
+		System.out.println("Salon = " + maison.superficiePiece("SALON") + "m², nombre de salon = "+maison.nombreDePiece("SALON"));
+		System.out.println("Salle de bain = " + maison.superficiePiece("salle de bain") + "m², nombre de salle de bain = "+maison.nombreDePiece("salle de bain"));
+		System.out.println("WC = " + maison.superficiePiece("wc") + "m², nombre de WC = "+maison.nombreDePiece("wc"));
 
 	}
 

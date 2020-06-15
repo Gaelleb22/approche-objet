@@ -42,5 +42,39 @@ public class Maison {
 		}
 		return superficie;
 	}
+	
+	public String superficiePiece(String nomPiece) {
+		double superficie=0;
+		String stSuperficie = null;
+		if(nomPiece.equalsIgnoreCase("chambre") || nomPiece.equalsIgnoreCase("cuisine") || nomPiece.equalsIgnoreCase("salle de bain") || nomPiece.equalsIgnoreCase("salon") || nomPiece.equalsIgnoreCase("wc")) {
+			for(int i=0; i<pieces.length; i++) {
+				if(nomPiece.equalsIgnoreCase(pieces[i].toString())) {
+					superficie += pieces[i].getSuperficie();
+				}
+			}
+		stSuperficie = String.valueOf(superficie);
+		}
+		else {
+			stSuperficie = "\"Piece inexistante\" ";
+		}
+		return stSuperficie;
+	}
+	
+	public String nombreDePiece(String nomPiece) {
+		int nombreDePiece = 0;
+		String nombre = null;
+		if(nomPiece.equalsIgnoreCase("chambre") || nomPiece.equalsIgnoreCase("cuisine") || nomPiece.equalsIgnoreCase("salle de bain") || nomPiece.equalsIgnoreCase("salon") || nomPiece.equalsIgnoreCase("wc")) {
+			for(int i=0; i<pieces.length; i++) {
+				if(nomPiece.equalsIgnoreCase(pieces[i].toString())) {
+					nombreDePiece +=1;
+				}
+			}
+		nombre = String.valueOf(nombreDePiece);
+		}
+		else {
+			nombre = "\"Piece inexistante\" ";
+		}
+		return nombre;
+	}
 
 }
