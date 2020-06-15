@@ -85,25 +85,5 @@ public class Jeu {
 	        catch(Exception e)
 	        {}  
 	 }
-	/**  boolean quitter = false;
-	 
-		case(2) : combattre();
-		
-			if(marcus.getPdv()<=0){
-				vaiqueur = creature.getNom();
-				Syso marcus.getScore();
-				finCombat = true;
-			}
-			else if(creature.getPdv()<=0){
-				vaiqueur = "marcus";
-				marcus.calculerScore(creature);
-				Syso marcus.getScore();
-				finCombat = true;
-			}
-			else {
-				continue;
-			}
-		}
-	break;
-*/
+	
 }

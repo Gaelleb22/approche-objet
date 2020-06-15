@@ -50,41 +50,6 @@ public class TestJdr {
 				}
 			}
 		}
-		/**  boolean quitter = false;
-		 
-		 		case(2) : combattre();
-		 		Creature creature = new Creature();
-		 		System.out.println(creature.getNom());
-		 		System.out.println(creature.getForce());
-		 		System.out.println(creature.getPointDeVie());
-		 		String vainqueur = null;
-		 		boolean finCombat = false;
-		 		while(!finCombat){
-		 		attaquePersonnage = marcus.attaque();
-		 		attaqueCreature = creature.attaque();
-		 		degat = attaquePerso - attaqueCreature;
-		 		if degat=0; continue
-		 		else if <0 ; marcus.pdv-(-degat)
-		 		else creature.pdv-degat;
-		 		marcus.calculerPdv();
-		 		creature.calculerPdv();
-		 			if(marcus.getPdv()<=0){
-		 				vaiqueur = creature.getNom();
-		 				Syso marcus.getScore();
-		 				finCombat = true;
-		 			}
-		 			else if(creature.getPdv()<=0){
-		 				vaiqueur = "marcus";
-		 				marcus.calculerScore(creature);
-		 				Syso marcus.getScore();
-		 				finCombat = true;
-		 			}
-		 			else {
-		 				continue;
-		 			}
-		 		}
-		 	break;
-		*/
 		
 	}
 
