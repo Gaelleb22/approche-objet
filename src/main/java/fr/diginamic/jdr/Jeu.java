@@ -37,6 +37,7 @@ public class Jeu {
 			//déterminer le vainqueur du tour
 			if(degat==0) {
 				System.out.println("Pas vaiqueur pour ce tour");
+				appuyerSurEntrerPourContinue();
 				continue;
 			}
 			else if(degat<0) {
