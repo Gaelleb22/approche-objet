@@ -1,4 +1,4 @@
-package fr.diginamic.sets;
+package fr.diginamic.tri;
 
 import java.util.Collections;
 
@@ -6,7 +6,7 @@ import java.util.Collections;
  * @author formation
  *
  */
-public class Pays {
+public class Pays implements Comparable<Pays> {
 	/** nom */
 	private String nom;
 	/** nbHabitant */
@@ -25,6 +25,18 @@ public class Pays {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
 		this.pibParHabitant = pibParHabitant;
+	}
+	
+
+	@Override
+	public int compareTo(Pays pays2) {
+		if(this.pibParHabitant>pays2.pibParHabitant) {
+			return 1;
+		}
+		else if(this.pibParHabitant<pays2.pibParHabitant) {
+			return -1;
+		}
+		return 0;
 	}
 
 	

@@ -14,13 +14,12 @@ public class TestSetObjet {
         pays.add(new Pays("France", 67_064_000, 43_551));
         pays.add(new Pays("Allemagne", 83_149_300, 50_206));
         pays.add(new Pays("UK", 66_436_000, 43_620));
-        pays.add(new Pays("Italie", 60_317_000, 37_970));
+        pays.add(new Pays("Italie", 61_302_519, 37_970));
         pays.add(new Pays("Japon", 126_010_000, 42_659));
         pays.add(new Pays("Chine", 1_400_050_000, 16_624));
         pays.add(new Pays("Russie", 146_748_590, 28_712));
-        pays.add(new Pays("Inde", 1_368_163_000, 5_174));
+        pays.add(new Pays("Inde", 1_386_249_417, 5_174));
 		
-		System.out.println(pays);
 		
 		//PIB/hab le plus important :
 		Pays pibParHabPlusGrand = new Pays(" ", 0, 0);
@@ -29,36 +28,40 @@ public class TestSetObjet {
 				pibParHabPlusGrand = unPays;
 			}
 		}
-		System.out.println(pibParHabPlusGrand);
 		
 		//PIB total plus important :
 		Pays pibTotalPlusGrand = new Pays(" ", 1, 1);
 		for(Pays unPays : pays) {
-			if(unPays.getPibParHabitant()*unPays.getNbHabitant() > pibTotalPlusGrand.getPibParHabitant()*pibTotalPlusGrand.getNbHabitant()) {
+			if(unPays.getPibTotal() > pibTotalPlusGrand.getPibTotal()) {
 				pibTotalPlusGrand = unPays;
 			}
 		}
-		System.out.println(pibTotalPlusGrand);
+		
+		//pib plus petit en maj
+		Pays pibPlusPetit1 = pays.iterator().next();
+		for(Pays unPays : pays) {
+			if(unPays.getPibParHabitant() < pibPlusPetit1.getPibParHabitant()) {
+				pibPlusPetit1 = unPays;
+			}
+		}
+		pibPlusPetit1.setNom(pibPlusPetit1.getNom().toUpperCase());
 		
 		//PIB plus petit en majuscule
-		Pays pibPlusPetit = new Pays(" ", pibTotalPlusGrand.getNbHabitant(), pibTotalPlusGrand.getPibParHabitant());
+		Pays pibPlusPetit = pays.iterator().next();
 		
 		for(Pays unPays : pays) {
-			if(unPays.getPibParHabitant()*unPays.getNbHabitant() < pibPlusPetit.getPibParHabitant()*pibPlusPetit.getNbHabitant()) {
+			if(unPays.getPibTotal() < pibPlusPetit.getPibTotal()) {
 				pibPlusPetit = unPays;
 			}
 		}
 		
-		Iterator<Pays> iterator1 = pays.iterator();
-		while(iterator1.hasNext()) {
-			Pays unPays = iterator1.next();
-			if(unPays == pibPlusPetit) {
-				unPays.setNom(pibPlusPetit.getNom().toUpperCase());
-			}
-		}
 		pays.remove(pibPlusPetit);
 		
-		System.out.println(pays);
+		Iterator<Pays> iterator1 = pays.iterator();
+		while(iterator1.hasNext()) {
+			System.out.println(iterator1.next());
+		}
+		
 
 	}
 
