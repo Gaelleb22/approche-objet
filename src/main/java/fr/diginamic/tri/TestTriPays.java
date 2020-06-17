@@ -23,7 +23,7 @@ public class TestTriPays {
         Collections.sort(listePays);
         
         //Comparaison avec Comparator
-        Collections.sort(listePays, new ComparatorPibHabitant());
+        Collections.sort(listePays, new ComparatorHabitant());
         
         Iterator<Pays> iterator1 = listePays.iterator();
 		while(iterator1.hasNext()) {

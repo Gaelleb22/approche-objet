@@ -10,13 +10,7 @@ public class ComparatorHabitant implements Comparator<Pays> {
 
 	@Override
 	public int compare(Pays pays1, Pays pays2) {
-		if(pays1.getNbHabitant()>pays2.getNbHabitant()) {
-			return 1;
-		}
-		else if(pays1.getNbHabitant()<pays2.getNbHabitant()){
-			return -1;
-		}
-		return 0;
+		return pays1.getNbHabitant()-pays2.getNbHabitant();
 	}
 	
 

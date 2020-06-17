@@ -30,13 +30,7 @@ public class Pays implements Comparable<Pays> {
 
 	@Override
 	public int compareTo(Pays pays2) {
-		if(this.pibParHabitant>pays2.pibParHabitant) {
-			return 1;
-		}
-		else if(this.pibParHabitant<pays2.pibParHabitant) {
-			return -1;
-		}
-		return 0;
+		return -this.nom.compareTo(pays2.getNom());
 	}
 
 	
@@ -47,7 +41,7 @@ public class Pays implements Comparable<Pays> {
 	
 	@Override
 	public String toString() {
-		return nom +" - Poo : "+ nbHabitant +" - PIB/hab : "+ pibParHabitant +" PIB total : "+ getPibTotal();
+		return nom +" - Pop : "+ nbHabitant +" - PIB/hab : "+ pibParHabitant +" PIB total : "+ getPibTotal();
 	}
 
 
