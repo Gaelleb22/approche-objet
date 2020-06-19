@@ -6,7 +6,7 @@ import java.util.Date;
 public class TestDates {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("deprecation")
+
 		Date date1 = new Date(120, 5, 19);
 		SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println(format1.format(date1));

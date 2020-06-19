@@ -2,6 +2,8 @@ package fr.diginamic.sets;
 
 import java.util.Collections;
 
+import fr.diginamic.enumeration.Continent;
+
 /**Créer une classe pays
  * @author formation
  *
@@ -13,7 +15,7 @@ public class Pays {
 	private int nbHabitant;
 	/** pibParHabitant */
 	private int pibParHabitant;
-	
+	private Continent continent;
 	
 	
 	/** Constructeur
@@ -21,12 +23,18 @@ public class Pays {
 	 * @param nbHabitant
 	 * @param pibParHabitant
 	 */
+	public Pays(String nom, int nbHabitant, int pibParHabitant, Continent continent) {
+		this.nom = nom;
+		this.nbHabitant = nbHabitant;
+		this.pibParHabitant = pibParHabitant;
+		this.continent = continent;
+	}
+
 	public Pays(String nom, int nbHabitant, int pibParHabitant) {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
 		this.pibParHabitant = pibParHabitant;
 	}
-
 	
 	public long getPibTotal() {
 		long calcul = (long)nbHabitant * (long)pibParHabitant;
@@ -35,7 +43,7 @@ public class Pays {
 	
 	@Override
 	public String toString() {
-		return nom +" - Poo : "+ nbHabitant +" - PIB/hab : "+ pibParHabitant +" PIB total : "+ getPibTotal();
+		return continent + " - " +nom +" - Poo : "+ nbHabitant +" - PIB/hab : "+ pibParHabitant +" PIB total : "+ getPibTotal();
 	}
 
 
@@ -74,6 +82,22 @@ public class Pays {
 	 */
 	public void setPibParHabitant(int pibParHabitant) {
 		this.pibParHabitant = pibParHabitant;
+	}
+
+
+	/** Getter
+	 * @return the continent
+	 */
+	public Continent getContinent() {
+		return continent;
+	}
+
+
+	/** Setter
+	 * @param continent the continent to set
+	 */
+	public void setContinent(Continent continent) {
+		this.continent = continent;
 	}
 
 }
