@@ -1,21 +1,22 @@
 package fr.diginamic.dates;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TestDates {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("deprecation")
-		Date hier = new Date(2020, 06, 16);
-		System.out.println(hier.getDate()+"/"+hier.getMonth()+"/"+hier.getYear());
+		Date date1 = new Date(120, 5, 19);
+		SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println(format1.format(date1));
 		
-		Date aujourdhui = new Date(2020, 06, 17, 23, 30, 59);
-		System.out.println(aujourdhui.getDate()+"/"+aujourdhui.getMonth()+"/"+aujourdhui.getYear()+" "+aujourdhui.getHours()+":"+aujourdhui.getMinutes()+":"+aujourdhui.getSeconds());
+		Date date2 = new Date(116, 4, 19, 23, 59, 30);
+		SimpleDateFormat format2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		System.out.println(format2.format(date2));
 		
 		Date systeme = new Date();
-		System.out.println(systeme.getDate()+"/"+systeme.getMonth()+"/"+systeme.getYear()+" "+systeme.getHours()+":"+systeme.getMinutes()+":"+systeme.getSeconds());
-		
-		System.out.println(systeme.toLocaleString());
+		System.out.println(format2.format(systeme));
 
 	}
 
