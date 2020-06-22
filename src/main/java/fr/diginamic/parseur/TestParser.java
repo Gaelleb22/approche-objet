@@ -1,8 +1,9 @@
-package fr.diginamic.essais;
+package fr.diginamic.parseur;
 
-import fr.diginamic.parseur.Expression;
-import fr.diginamic.parseur.Parser;
-
+/**Classe exécutive test du Parseur
+ * @author formation
+ *
+ */
 public class TestParser {
 
 	public static void main(String[] args) {

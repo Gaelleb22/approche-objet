@@ -11,7 +11,7 @@ public class Region {
 	
 	/** ville de la région */
 	List<Ville> villeRegion;
-	/** populationTotale */
+	/** population totale */
 	private int populationTotale;
 	/** nom */
 	private String nomRegion;
@@ -33,6 +33,10 @@ public class Region {
 	}
 
 
+	/**calcul de la population d'une région
+	 * @param liste
+	 * @return population
+	 */
 	private int calculPopulation(List<Ville> liste) {
 		int population=0;
 		for(Ville ville : liste) {

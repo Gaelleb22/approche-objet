@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-/**
+/**Classe permettant de trouver les 10 départements les plus peuplée de France
  * @author formation
  *
  */

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
+/**Classe permettant de trouver les 10 villes les plus peuplées d'un département donnéeS
  * @author formation
  *
  */

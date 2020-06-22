@@ -4,6 +4,7 @@ package geometrie;
  *
  */
 public class Rectangle implements ObjetGeometrique{
+	
 	/** longueur */
 	private double longueur;
 	/** largeur */

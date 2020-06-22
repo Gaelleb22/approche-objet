@@ -35,6 +35,10 @@ public class Departement {
 		this.populationTotale = calculPopulation(villeDuDepartement);
 	}
 	
+	/**méthode de calcul de la population d'un département
+	 * @param liste
+	 * @return population
+	 */
 	private int calculPopulation(List<Ville> liste) {
 		int population=0;
 		for(Ville ville : liste) {

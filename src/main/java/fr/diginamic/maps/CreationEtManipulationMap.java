@@ -3,9 +3,15 @@ package fr.diginamic.maps;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/**Classe exécutlable test des map
+ * @author formation
+ *
+ */
 public class CreationEtManipulationMap {
+	
 	public static void main(String args[]) {
 		
+		//création mapVille avec numéro de département et nom des villes
 		HashMap<Integer, String> mapVilles = new HashMap<>();
 		mapVilles.put(13, "Marseille");
 		mapVilles.put(34, "Montpellier");

@@ -1,13 +1,13 @@
 package fr.diginamic.listes;
 
-/**
+/**Classe représentant une ville
  * @author formation
  *
  */
 public class Ville {
 	/** nom */
 	private String nom;
-	/** nombreHabitant */
+	/** nombre d'habitant */
 	private int nombreHabitant;
 	
 	/** Constructeur

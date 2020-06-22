@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-/**
+/**Classe permettant de trouver les 10 région les plus peuplées de France
  * @author formation
  *
  */

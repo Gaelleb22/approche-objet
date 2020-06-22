@@ -6,7 +6,7 @@ package fr.diginamic.recensement;
 import java.util.List;
 import java.util.Scanner;
 
-/**
+/**Classe permettant de récupérer la population d'un département donnée
  * @author formation
  *
  */

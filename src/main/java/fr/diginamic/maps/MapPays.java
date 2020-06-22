@@ -6,9 +6,15 @@ import java.util.Map;
 
 import fr.diginamic.sets.Pays;
 
+/**Classe exécutive pour testes les map objet
+ * @author formation
+ *
+ */
 public class MapPays {
 
 	public static void main(String[] args) {
+		
+		//création de la map
 		Map<String, Pays> mapPays = new HashMap<>();
 		mapPays.put("USA", new Pays("USA", 332_639_000, 59_495));
 		mapPays.put("France", new Pays("France", 67_064_000, 43_551));
@@ -22,8 +28,7 @@ public class MapPays {
 		
 		//rechercher et supprimer le pays le moins peuplé
 		Iterator<String> keyIte = mapPays.keySet().iterator();
-		Iterator<Pays> paysIte = mapPays.values().iterator();
-		Pays paysMoinsPeuple = paysIte.next();
+		Pays paysMoinsPeuple = mapPays.values().iterator().next();
 		while(keyIte.hasNext()) {
 			String key = keyIte.next();
 			if(mapPays.get(key).getNbHabitant()<paysMoinsPeuple.getNbHabitant()) {

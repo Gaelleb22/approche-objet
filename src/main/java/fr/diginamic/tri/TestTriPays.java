@@ -5,9 +5,15 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+/**Classe exécutable pour tester différentes méthodes de tri
+ * @author formation
+ *
+ */
 public class TestTriPays {
 
 	public static void main(String[] args) {
+		
+		//Création d'une liste Pays
 		List <Pays> listePays = new ArrayList<>();
 		listePays.add(new Pays("USA", 332_639_000, 59_495));
         listePays.add(new Pays("France", 67_064_000, 43_551));

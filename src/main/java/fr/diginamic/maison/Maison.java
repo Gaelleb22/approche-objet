@@ -1,12 +1,25 @@
 package fr.diginamic.maison;
 
+/**Classe objet représentant une maison composée d'un tableau de type Piece
+ * @author formation
+ *
+ */
 public class Maison {
+	
+	/** pieces de la maison */
 	private Piece[] pieces;
 
+	/** Constructeur
+	 * 
+	 */
 	public Maison() {
 		this.pieces = new Piece[0];
 	}
 	
+	/**méthode permettant d'ajouter une Piece au tableau
+	 * @param nouvellePiece
+	 * @return tableau pieces
+	 */
 	public Piece[] ajouterPiece(Piece nouvellePiece) {
 		if(nouvellePiece == null) {
 			System.out.println("Veuillez ajouter une pièce");
@@ -25,6 +38,9 @@ public class Maison {
 		return pieces;
 	}
 	
+	/**Méthode de calcul de la superficie totale de la maison
+	 * @return superficie
+	 */
 	public double superficieTotale() {
 		double superficie=0;
 		for (int i=0; i<pieces.length; i++) {
@@ -33,6 +49,10 @@ public class Maison {
 		return superficie;
 	}
 	
+	/**Méthode de calcul de la superficie d'un étage donné
+	 * @param etage
+	 * @return superficie
+	 */
 	public double superficieEtage(int etage) {
 		double superficie=0;
 		for (int i=0; i<pieces.length; i++) {
@@ -43,6 +63,10 @@ public class Maison {
 		return superficie;
 	}
 	
+	/**Méthode de calcul de la superficie des pièces d'un type donné
+	 * @param nom de la pièce
+	 * @return superficie
+	 */
 	public String superficiePiece(String nomPiece) {
 		double superficie=0;
 		String stSuperficie = null;
@@ -60,6 +84,10 @@ public class Maison {
 		return stSuperficie;
 	}
 	
+	/**Méthode de calcul du nombre de pièce d'un type donné
+	 * @param nom de la pièce
+	 * @return nombre
+	 */
 	public String nombreDePiece(String nomPiece) {
 		int nombreDePiece = 0;
 		String nombre = null;
@@ -75,6 +103,20 @@ public class Maison {
 			nombre = "\"Piece inexistante\" ";
 		}
 		return nombre;
+	}
+
+	/** Getter
+	 * @return the pieces
+	 */
+	public Piece[] getPieces() {
+		return pieces;
+	}
+
+	/** Setter
+	 * @param pieces the pieces to set
+	 */
+	public void setPieces(Piece[] pieces) {
+		this.pieces = pieces;
 	}
 
 }

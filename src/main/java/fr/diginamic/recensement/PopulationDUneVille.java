@@ -6,7 +6,7 @@ package fr.diginamic.recensement;
 import java.util.List;
 import java.util.Scanner;
 
-/**Population d'une ville donnée
+/**Classe pour rechercher la population d'une ville donnée
  * @author formation
  *
  */
@@ -15,7 +15,8 @@ public class PopulationDUneVille extends MenuService {
 	@Override
 	public void traiter(List<Ville> liste, Scanner scanner) {
 		System.out.println("Entrez le nom de la ville");
-		String nom = scanner.next();
+		scanner.nextLine();
+		String nom = scanner.nextLine();
 		
 		
 		String commune = null;

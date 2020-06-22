@@ -5,9 +5,15 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+/**Classe exécutive test sur liste d'objet
+ * @author formation
+ *
+ */
 public class TestListeObjet {
 
 	public static void main(String[] args) {
+		
+		//création d'une liste d'objet
 		List <Ville> villes = new ArrayList<Ville>();
 		villes.add(new Ville("Nice", 343000));
 		villes.add(new Ville("Carcassonne", 47800));
@@ -18,6 +24,7 @@ public class TestListeObjet {
 		villes.add(new Ville("Marseille", 850700));
 		villes.add(new Ville("Tarbes", 40600));
 		
+		//recherche ville avec plus grand nombre d'habitants
 		Ville plusGrande = villes.get(0);
 		for(Ville ville : villes) {
 			if(ville.getNombreHabitant()>plusGrande.getNombreHabitant()) {
@@ -26,7 +33,7 @@ public class TestListeObjet {
 		}
 		System.out.println(plusGrande);
 		
-		
+		//Supprimer la ville la moins peuplée
 		Ville plusPetite = villes.get(0);
 		for(Ville ville : villes) {
 			if(ville.getNombreHabitant()<plusPetite.getNombreHabitant()) {
@@ -35,6 +42,7 @@ public class TestListeObjet {
 		}
 		villes.remove(plusPetite);
 		
+		//villes de plus de 100 000 habitant en majuscule
 		Iterator <Ville> iterator1 = villes.iterator();
 		int index =-1;
 		while(iterator1.hasNext()) {

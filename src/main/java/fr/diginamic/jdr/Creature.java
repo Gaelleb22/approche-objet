@@ -2,36 +2,45 @@ package fr.diginamic.jdr;
 
 import java.util.Random;
 
+/**Classe permettant de créer une créature
+ * @author formation
+ *
+ */
 public class Creature extends Combattant {
 	
 	Random random = new Random();
 	
-	private String nom;
-
+	/** Constructeur
+	 * 
+	 */
 	public Creature() {
-		this.nom = creatureAleatoire();
-		super.setForce(forceAleatoire(nom));
-		super.setPointDeVie(pdvAleatoire(nom));
+		super.setNom(creatureAleatoire());
+		super.setForce(forceAleatoire(getNom()));
+		super.setPointDeVie(pdvAleatoire(getNom()));
 	}
 
-	public String getNom() {
-		return nom;
-	}
 
+	/**méthode permettant de générer un nom de créature aléatoire
+	 * @return nom
+	 */
 	private String creatureAleatoire() {
-		nom = null;
+		setNom(null);
 		int nombreAleatoire = random.nextInt(3);
 		switch(nombreAleatoire) {
-		case(0) : nom = "loup";
+		case(0) : setNom("loup");
 		break;
-		case(1) : nom = "gobelin";
+		case(1) : setNom("gobelin");
 		break;
-		case(2) : nom = "troll";
+		case(2) : setNom("troll");
 		break;
 		}
-		return nom;
+		return getNom();
 	}
 	
+	/**méthode permettant de générer une force aléatoire en fonction du nom
+	 * @param nom
+	 * @return force
+	 */
 	private int forceAleatoire(String nom) {
 		int force = 0;
 		if(nom.equals("loup")) {
@@ -46,6 +55,10 @@ public class Creature extends Combattant {
 		return force;
 	}
 	
+	/**méthode permettant de générer des points de vie aléatoires en fonction du nom
+	 * @param nom
+	 * @return point de vie
+	 */
 	private int pdvAleatoire(String nom) {
 		int pdv = 0;
 		if(nom.equals("loup")) {

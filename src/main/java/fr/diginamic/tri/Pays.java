@@ -2,16 +2,17 @@ package fr.diginamic.tri;
 
 import java.util.Collections;
 
-/**Créer une classe pays
+/**Créer une classe pays, implémente l'interface Comparable
  * @author formation
  *
  */
 public class Pays implements Comparable<Pays> {
+	
 	/** nom */
 	private String nom;
-	/** nbHabitant */
+	/** nombre d'habitant */
 	private int nbHabitant;
-	/** pibParHabitant */
+	/** pib par habitant */
 	private int pibParHabitant;
 	
 	
@@ -33,7 +34,9 @@ public class Pays implements Comparable<Pays> {
 		return -this.nom.compareTo(pays2.getNom());
 	}
 
-	
+	/**calcul du PIB total
+	 * @return
+	 */
 	public long getPibTotal() {
 		long calcul = (long)nbHabitant * (long)pibParHabitant;
 		return calcul; 

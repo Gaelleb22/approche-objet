@@ -5,9 +5,15 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+/**Classe exécutable pour tester les set d'objet
+ * @author formation
+ *
+ */
 public class TestSetObjet {
 
 	public static void main(String[] args) {
+		
+		//Création set Pays
 		Set<Pays> pays = new HashSet<Pays>();
 				
 		pays.add(new Pays("USA", 332_639_000, 59_495));
@@ -57,6 +63,7 @@ public class TestSetObjet {
 		
 		pays.remove(pibPlusPetit);
 		
+		//affichage du set
 		Iterator<Pays> iterator1 = pays.iterator();
 		while(iterator1.hasNext()) {
 			System.out.println(iterator1.next());

@@ -4,6 +4,7 @@ package geometrie;
  * 
  */
 public class Cercle implements ObjetGeometrique{
+	
 	/** rayon */
 	private double rayon;
 

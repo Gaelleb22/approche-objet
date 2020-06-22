@@ -1,21 +1,23 @@
 package fr.diginamic.salaire;
 
+/**Classe représentant un salarié
+ * Hérite de la classe Intervenant
+ * @author formation
+ *
+ */
 public class Salarie extends Intervenant {
 	
-	//cf CDD CDI
+	/** salaire mensuel */
 	private double salaireMensuel;
 
+	/** Constructeur
+	 * @param nom
+	 * @param prenom
+	 * @param salaireMensuel
+	 */
 	public Salarie(String nom, String prenom, double salaireMensuel) {
 		super(nom, prenom);
 		this.salaireMensuel = salaireMensuel;
-	}
-
-	public double getSalaireMensuel() {
-		return salaireMensuel;
-	}
-
-	public void setSalaireMensuel(double nvSalaireMensuel) {
-		this.salaireMensuel = nvSalaireMensuel;
 	}
 
 	@Override
@@ -23,8 +25,22 @@ public class Salarie extends Intervenant {
 		return salaireMensuel;
 	}
 	
+	@Override
 	public String toString() {
 		return "Salarie";
 	}
 
+	/** Getter
+	 * @return the salaireMensuel
+	 */
+	public double getSalaireMensuel() {
+		return salaireMensuel;
+	}
+
+	/** Setter
+	 * @param salaireMensuel the salaireMensuel to set
+	 */
+	public void setSalaireMensuel(double salaireMensuel) {
+		this.salaireMensuel = salaireMensuel;
+	}
 }

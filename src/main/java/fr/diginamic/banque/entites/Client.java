@@ -1,10 +1,10 @@
-package fr.diginamic.salaire;
+package fr.diginamic.banque.entites;
 
-/**Classe mère représentant un intervenant
+/**Classe objet représentant un client de la banque
  * @author formation
  *
  */
-public abstract class Intervenant {
+public class Client {
 	
 	/** nom */
 	private String nom;
@@ -15,24 +15,9 @@ public abstract class Intervenant {
 	 * @param nom
 	 * @param prenom
 	 */
-	public Intervenant(String nom, String prenom) {
+	public Client(String nom, String prenom) {
 		this.nom = nom;
 		this.prenom = prenom;
-	}
-
-	/**méthode de calcul du salaire
-	 * @return salaire
-	 */
-	public abstract double getSalaire();
-	
-	/**méthode d'affichage des données de l'intervenant
-	 * 
-	 */
-	public void afficherDonnees() {
-		System.out.println("Nom : "+nom);
-		System.out.println("Prénom : "+prenom);
-		System.out.println("Salaire : "+getSalaire());
-		System.out.println("Statut : "+toString());
 	}
 
 	/** Getter
